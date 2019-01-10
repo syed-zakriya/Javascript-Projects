@@ -1,0 +1,30 @@
+<html>
+	<title>Coin Toss App</title>
+	<head>Take your guess and click one of the buttons</head>
+	<body>
+		<div class="btnSelectorDiv">
+			<button type="button">Heads</button>
+			<button type="button">Tails</button>
+		</div>
+		<div class="messageSection">
+		</div>
+	<script>
+		const divItem = document.querySelector(".btnSelectorDiv");
+		const msgDiv = document.querySelector(".messageSection");
+		const buttons = document.querySelectorAll("button");
+		console.log(buttons);
+		
+		for(let i =0;i<buttons.length;i++)
+		{
+			console.log(buttons[i]);
+			
+			buttons[i].addEventListener("click",tossCoin);
+		}
+		
+		function tossCoin(e){
+			console.log(e.target.innerText);
+			console.log(e.target.textContent+" Button Pressed");
+		}
+	</script>
+	</body>
+</html>
